@@ -5,6 +5,7 @@ var hero = document.createElement("div");
 hero.setAttribute("class","hero");
 var btn = document.createElement("button");
 btn.innerText="meou me"
+//everytime this button will be clicked a random cag image will be shown on a new tab
 btn.onclick = () => {
     window.open('https://cataas.com/cat',"blank");
 }
@@ -14,9 +15,11 @@ p.append(btn);
 hero.append(p);
 var ul = document.createElement("ul");
 ul.setAttribute("class","myul");
+//function to get the data from api
 const getData = async() => {
     fetch(`https://cataas.com/api/tags`,{method:'GET'})
     .then(data=>data.json())
+    //listing out all the cat tags
     .then(data=>{
         data.map((ele,index)=>{
             if(ele==="#christmascat"){
@@ -36,6 +39,7 @@ const getData = async() => {
     })
     .catch(data=>console.log(data))
 }
+//calling function to get data
 getData();
 container.append(h1);
 container.append(hero);
