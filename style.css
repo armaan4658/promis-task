@@ -1,0 +1,25 @@
+.links{
+    cursor: pointer;
+}
+.links:hover{
+    text-decoration: underline;
+    color: blue;
+}
+h1{
+    text-align: center;
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+}
+.hero{
+    display: grid;
+    place-items: center;
+    background-color: violet;
+    color: white;
+    padding: 10px 0;
+}
+.hero button{
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+}
